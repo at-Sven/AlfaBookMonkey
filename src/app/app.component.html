@@ -1,0 +1,31 @@
+<div class="ui menu">
+  <a routerLink="home" routerLinkActive="active" class="item">Home</a>
+  <a routerLink="books" routerLinkActive="active" class="item">Bücher</a>
+  <a routerLink="admin" routerLinkActive="active" class="item">Administration</a>
+</div>
+<router-outlet></router-outlet>
+
+
+<!-- Pipe Spielereien -->
+
+<p bmHighlight>Highlight me!</p>
+
+<br>
+<!--
+<p *ngIf="true">
+  Expression is true and ngIf is true.
+  This paragraph is in the DOM.
+</p>
+<p *ngIf="false">
+  Expression is false and ngIf is false.
+  This paragraph is not in the DOM.
+</p>
+<br>-->
+<p>The hero's birthday is {{ birthday | date:format }}</p>
+<button (click)="toggleFormat()">Toggle Format</button>
+
+
+<p>{{ "Sven Böhrnsen" | testPipe }}</p>
+<p>{{ 1024 | fileSize }}</p>
+<p>{{ ["Sven", "Anne", "Michelle", "Mike", "Arne", "Saad"] | toSentence }}</p>
+<p>{{ ["Sven", "Anne", "Michelle", "Mike", "Arne", "Saad"] | arraySort }}</p>
